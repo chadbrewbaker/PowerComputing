@@ -1,0 +1,3 @@
+pdflatex PowerComputing
+bibtex PowerComputing
+pdflatex PowerComputing
