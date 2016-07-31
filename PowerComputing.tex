@@ -1,5 +1,87 @@
+\title{Power series and combinatorial species of small order}
+%\author{
+%        Chad Brewbaker \\
+%        DataCulture LLC\\
+%        Clive, Iowa 50325, \underline{U.S.A}
+%}
+\date{\today}
+
+\documentclass{article}
+\usepackage{listings}
+\lstnewenvironment{code}{\lstset{language=Haskell,basicstyle=\small}}{}
+\usepackage{minted}
+\usepackage{hyperref}
+\usepackage{amsthm}
+\usepackage{graphicx}
+%\graphicspath{ {img/} {znMultData/}}
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{exam}[thm]{Example}
+\newtheorem{subroutine}[thm]{Subroutine}
+%\theoremstyle{plain}
+%\newtheorem{thm}{Theorem}% reset theorem numbering for each chapter
+
+%\theoremstyle{definition}
+%\newtheorem{defn}[thm]{Definition} % definition numbers are dependent on theorem numbers
+%\newtheorem{exmp}[thm]{Example}
+
+
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+I this paper we survey power series and combinatorial species of small order.
+\end{abstract}
+
 \documentclass{article}
 \begin{document}
+
+Ones ${1\over 1-z}$.
+
+Fibonacci ${1\over 1-z-z^2)}$.
+\inputminted{text}{fib.seq}
+
+Tribonacci ${1\over 1-z-(z*z)-(z*z*z)}$.
+\inputminted{text}{trib.seq}
+
+Master theorem for list of initial conditions followed by a linear recurrence 
+
+$${1\over a-bz-cz^2-dz^3 \ldots}$$ 
+$$f(0)=a, f(n) = bf(n-1) +cf(n-2) \ldots$$
+
+Master theorem for list of initial conditions followed by a polynomial recurrence
+
+Fifty choose five $(1+z)^{50})$.
+\inputminted{text}{fc5.seq}
+
+20 black marbles in 40 labeled jars\\
+last \$ take 20 $( (1/(1-z))^{40})$
+
+
+Combinations of US bills to make \$49\\
+take 49 $ {1\over (1-z)} * {1\over 1-(z^2)}*{ 1\over 1-(z^5)}*{1\over 1-(z^{10})}*{1\over 1-(z^{20})}$ 
+     
+Initally 3, then 7 times previous term $3\over 1-(7*z)$
+
+
+The operators:
+
+Compositional product $\circ$
+
+Differentiation $\triange$
+
+Element wise (Cartesian, Hadamard) product $\times$
+
+Partitional product $\dot$
+
+Box product $\boxtimes$
+
+multiplicative disjunction analogue  $\clubsuit$
+
+Exponentiation $a^b$
 
 
 Kent Iverson, APL

@@ -6,6 +6,16 @@ default (Integer, Rational, Double)
 main = do
 	print "Ones 1/(1-z)"
 	print (take 10 (1/(1-z)))
+ 
+        print "Fives : 5/5(1-z)"
+        print (take 10 (5/(1-(1*z))))
+
+        print "5^{n} : 1/(5-z)"
+        print (take 10 (1/(5-z)))
+
+        print "f(0)=2; f(1)=6; f(n) = 3f(n-1) + 5f(n-2)  1/2((1-3z -5z^2))"
+        print (take 10 (2/ (1 - (3*z) - (5*z*z))))     
+
         print "Fibonacci 1/(1-z-z^2)"
 	print (take 10 (1/(1-z-(z*z))))
 	print "Tribonacci numbers"
